@@ -1,0 +1,14 @@
+        body{
+            text-align: center;
+        }
+        h2 {
+            color: blue;
+        }
+        table {
+            margin: auto;
+            border: 1px solid black;
+            width: 50%;
+        }
+        th {
+            background-color: #f2f2f2;
+        }

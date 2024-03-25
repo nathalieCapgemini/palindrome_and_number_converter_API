@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome</title>
+    <link th:href="@{/stylesheet.css}" rel="stylesheet"/>
+</head>
+<body>
+<h1>Check if a number is a palindrome OR</h1>
+<h2><a th:href="@{/romanNumberToInteger}">Convert the roman number to its integer equivalent</a>
+</h2>
+<table> <!-- Add a table to display the results -->
+    <tr>
+        <th>Enter a number</th>
+        <td>
+            <form action="#" th:action="@{/isPalindrome}" th:object="${formInput}" method="post">
+                <input type="text" name="number" placeholder="Enter a number">
+                <button type="submit" value="Submit">Check</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <th>Result:</th>
+        <td>
+            <p th:text="${result} ? ${result} : 'The number not found'"></p>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

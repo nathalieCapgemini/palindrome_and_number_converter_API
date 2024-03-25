@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>romanNumberToInteger</title>
+  <link th:href="@{/stylesheet.css}" rel="stylesheet"/>
+</head>
+<body>
+<h1>Convert the roman number to its integer equivalent</h1>
+<a th:href="@{/isPalindrome}"><h2>OR Check if a number is a palindrome</h2></a>
+<form action="#" th:action="@{/romanNumberToInteger}" th:object="${formInput}" method="post">
+  <input type="text" name="number" placeholder="Enter a number">
+  <button type="submit" value="Submit">Check</button>
+</form>
+<p th:text="${result} ? ${result} : 'The number was not converted'"></p>
+
+
+</body>
+</html>
